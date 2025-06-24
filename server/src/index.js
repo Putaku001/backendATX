@@ -16,7 +16,11 @@ const PORT = process.env.PORT || 3001;
 // Configuración de CORS para producción
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
-    ? [process.env.FRONTEND_URL, 'https://animetrackerx.vercel.app'] 
+    ? [
+        process.env.FRONTEND_URL,
+        'https://frontend-atx.vercel.app',
+        'https://frontend-r2qmx6znp-kennethgranados64-gmailcoms-projects.vercel.app'
+      ] 
     : ['http://localhost:5173', 'http://localhost:3000'],
   credentials: true,
   optionsSuccessStatus: 200
