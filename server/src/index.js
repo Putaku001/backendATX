@@ -28,6 +28,7 @@ const corsOptions = {
 
 // Middleware
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // Soporte global para preflight OPTIONS
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
